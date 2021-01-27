@@ -13,11 +13,11 @@
 </tr>
 
 <tr>
-    <td>Convert to:</td>
+    <td>Conversion:</td>
     <td><select name="scale" id="scale" size="1">
                <option disabled>Select the scale</option>
-               <option value="c">Celsius</option>
-               <option value="f">Fahrenheit</option>
+               <option value="c">Fahrenheit -> Celsius</option>
+               <option value="f">Celsius -> Fahrenheit</option>
         </select>
     </td>
 </tr>
