@@ -18,6 +18,7 @@
                <option disabled>Select the scale</option>
                <option value="c">Fahrenheit -> Celsius</option>
                <option value="f">Celsius -> Fahrenheit</option>
+               <option value="k">Celsius -> Kelvin</option>
         </select>
     </td>
 </tr>
@@ -39,13 +40,16 @@
     elseif ($type== "c"){
        return (($value - 32) * (5/9));
    }
+    elseif ($type== "k"){
+       return ($value + 273.15);
+   }
 }
 
 if (isset($_POST['btnConvert'])) {
 $temp = $_POST['temp'];
 $scale = $_POST['scale'];
 $converted = convert($temp, $scale);
-echo "The original temperature, $temp, converted is $converted.";
+echo "The original temperature, $temp&deg;$scale, converted is $converted.";
 }
 ?>
 
